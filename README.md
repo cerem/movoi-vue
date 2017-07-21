@@ -1,4 +1,4 @@
 # movoi-vue
 
-movi JavaScript
-cerem.github.io/movoi/
+JavaScript sürümü
+https://cerem.github.io/movoi/
