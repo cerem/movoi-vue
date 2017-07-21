@@ -1,30 +1,67 @@
 /*Movoi in vue*/
 /*base color: #4fc08d*/
-
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=latin-ext');
 
-body{
-  font-family:"Lato", sans-serif;
-  font-size:16px;
+body {
+  background: #1f1f1f;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
   font-variant-ligatures: common-ligatures;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
-header{
-  padding: 15px 0px;
-}
-.logotype{
-  color: #cecece;
-  font-size: 37px;
-  margin-top: 5px;
-}
-.search-box{
-  border:solid 1px #d6f5e7;
-  box-sizing: border-box;
-  font-family:"Lato", sans-serif;
-  padding: 13px;
-  font-size: 17px;
+
+header {
+  background-color: rgba(39, 38, 38, 0.89);
+  padding: 10px 0px;
+  margin-bottom: 15px;
+  position: fixed;
   width: 100%;
+  z-index: 10;
+}
+
+.content{
+  padding-top:100px;
+}
+
+.logotype {
+  color: #4fc08d;
+  font-size: 37px;
+  margin-top: 11px;
+}
+
+.search-box {
+  border: 0px;
+  border-bottom: solid 1px #4fc08d;
+  background: #272626;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  padding: 13px 13px 10px 0px;
+  font-size: 21px;
+  color: white;
+  width: 100%;
+  margin-top: -6px;
   max-width: 100%;
-  outline:0px
+  outline: 0px
+}
+
+.card {
+  background: #101010;
+  border: 0px;
+  border-radius: 0px;
+  margin-bottom: 20px;
+}
+
+.card-img-top {
+  border-radius: 0px !important;
+}
+
+h4 {
+  color: #6f6f6f;
+  font-family: "Roboto Condensed"
+}
+
+.card-text {
+  color: #717171
 }
