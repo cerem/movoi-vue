@@ -38,10 +38,29 @@
           <!-- use the modal component, pass in the prop -->
           <modal v-if="showModal" @close="showModal = false">
             <h3 slot="header">{{ popupData.Title }}</h3>
+            <div slot="body">
+              <div class="row">
+                <div class="col-lg-4">
+                  <img :src="popupData.Poster" class="img-fluid poster">
+                  <p>{{ popupData.Runtime }}</p>
+                </div>
+                <div class="col-lg-8">
+                  <h2>{{ popupData.Plot }}</h2>
+                  <p>Directed by <strong>{{ popupData.Director }}</strong></p>
+                  <p>Runtime: <strong>{{ popupData.Runtime }}</strong></p>
+                  <p>Genre: <strong>{{ popupData.Genre }}</strong></p>
+                  <hr>
+                  <p>Writer(s): <strong>{{ popupData.Writer }}</strong></p>
+                  <p>Actors(s): <strong>{{ popupData.Actors }}</strong></p>
+                  <hr>
+                  <p>Awards(s): <strong>{{ popupData.Awards }}</strong></p>
+                </div>
+              </div>
+            </div>
           </modal>
         </div>
         <div class="col-sm-3" v-for="(movie, index) in remoteSearchJSONData">
-          <a href="#" class="get-movie-detail" v-on:click="get_movie_detail(movie.imdbID); showModal = true;">
+          <a href="#" class="get-movie-detail" v-on:click="get_movie_detail(movie.imdbID);">
             <div class="card">
               <img class="card-img-top" :src="movie.Poster" :alt="movie.Title">
               <div class="card-block">

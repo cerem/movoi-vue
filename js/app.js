@@ -32,7 +32,6 @@ new Vue({
         });
     },
     get_movie_detail: function (imdbID) {
-
       // OMDB API'si
       var omdbAPIKey = 'cfcb4f93';
 
@@ -46,9 +45,11 @@ new Vue({
       axios.get(omdbURL)
         .then(function (response) {
           // Gelen veri içindeki Search kısmındaki objeleri Vue'nin değerine atayalım.
+
           self.popupData = [];
           self.popupData = response.data;
-          console.info(response.data);
+
+          self.showModal = true;
         })
         .catch(function (error) {
           self.statusText = "Bir hata oluştu. " + error

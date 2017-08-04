@@ -84,17 +84,53 @@ h4 {
 }
 
 .modal-container {
-  width: 300px;
+  width: 700px;
+  color: #dedede;
   margin: 0px auto;
   padding: 20px 30px;
-  background-color: #fff;
+  background-color: #000;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
   transition: all .3s ease;
+}
+
+.modal-container h2 {
+  margin-bottom: 30px
+}
+
+.modal-container strong {
+  color: white
+}
+
+.modal-container hr {
+  border: solid 1px #dedede
+}
+
+.modal-header {
+  padding: 0px;
+  border: 0px;
+  padding-left: 14px;
+  padding-top: 20px;
+}
+
+.modal-container .poster {
+  margin-bottom: 10px;
+}
+
+.modal-container p {
+  margin-bottom: 10px;
+}
+
+.modal-footer {
+  padding-right: 0px;
+  padding-bottom: 20px;
+  border-top: none;
 }
 
 .modal-header h3 {
   margin-top: 0;
   color: #42b983;
+  padding: 0px;
+  border: 0px;
 }
 
 .modal-body {
@@ -103,6 +139,11 @@ h4 {
 
 .modal-default-button {
   float: right;
+  background: transparent;
+  border: solid 1px #1f1f1f;
+  color: white;
+  padding: 10px;
+  font-family: "Lato";
 }
 
 /*
