@@ -1,7 +1,9 @@
+
 new Vue({
   el: '#movoiapp',
   data: {
     logotype: '[m]',
+    showModal: false,
     movie_name: '',
     statusText: '',
     remoteSearchJSONData: []
@@ -31,4 +33,9 @@ new Vue({
         });
     }
   }
+
+})
+
+Vue.component('modal', {
+  template: '#modal-template'
 })
