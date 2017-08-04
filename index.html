@@ -4,7 +4,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>movoi [vue, beta]</title>
+  <title>movoi [vue.dev]</title>
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
@@ -35,24 +35,21 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <button id="show-modal" @click="showModal = true">Show Modal</button>
           <!-- use the modal component, pass in the prop -->
           <modal v-if="showModal" @close="showModal = false">
-            <!--
-              you can use custom content here to overwrite
-              default content
-            -->
-            <h3 slot="header">custom header</h3>
+            <h3 slot="header">{{ popupData.Title }}</h3>
           </modal>
         </div>
         <div class="col-sm-3" v-for="(movie, index) in remoteSearchJSONData">
-          <div class="card">
-            <img class="card-img-top" :src="movie.Poster" :alt="movie.Title">
-            <div class="card-block">
-              <h4 class="card-title">{{ movie.Title }}</h4>
-              <p class="card-text">{{ movie.Year }}</p>
+          <a href="#" class="get-movie-detail" v-on:click="get_movie_detail(movie.imdbID); showModal = true;">
+            <div class="card">
+              <img class="card-img-top" :src="movie.Poster" :alt="movie.Title">
+              <div class="card-block">
+                <h4 class="card-title">{{ movie.Title }}</h4>
+                <p class="card-text">{{ movie.Year }}</p>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -67,21 +64,20 @@
 
           <div class="modal-header">
             <slot name="header">
-              default header
+
             </slot>
           </div>
 
           <div class="modal-body">
             <slot name="body">
-              default body
+
             </slot>
           </div>
 
           <div class="modal-footer">
             <slot name="footer">
-              default footer
               <button class="modal-default-button" @click="$emit('close')">
-                OK
+                Close
               </button>
             </slot>
           </div>
