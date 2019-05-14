@@ -33,7 +33,7 @@ new Vue({
     },
     get_movie_detail: function (imdbID) {
       // OMDB API'si
-      var omdbAPIKey = 'cfcb4f93';
+      var omdbAPIKey = '22c640b6';
 
       // OMDb API URL'si
       var omdbURL = 'https://www.omdbapi.com/?i=' + imdbID + '&apikey=' + omdbAPIKey;
